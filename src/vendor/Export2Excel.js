@@ -1,6 +1,6 @@
 /* eslint-disable */
+require('./Blob');
 require('script-loader!file-saver');
-require('script-loader!src/vendor/Blob');
 require('script-loader!xlsx/dist/xlsx.core.min');
 
 function generateArray(table) {
