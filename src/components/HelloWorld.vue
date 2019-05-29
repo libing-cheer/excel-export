@@ -6,6 +6,7 @@
         type="primary"
         size="mini"
         style="margin:30px auto;"
+        @click="handleDownload"
       >导出</el-button>
       <el-table
         :data="tableData"
@@ -37,7 +38,7 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data () {
+  data() {
     return {
       msg: 'Welcome to Your Excel Export',
       tableData: [
@@ -60,12 +61,48 @@ export default {
           date: '2016-05-03',
           name: '赵小虎',
           address: '上海市普陀区金沙江路 1516 弄'
-        }]
+        }],
+      tableTitleData: [
+        {
+          label: '日期',
+          prop: 'date'
+        },
+        {
+          label: '姓名',
+          prop: 'name'
+        },
+        {
+          label: '地址',
+          prop: 'address'
+        }
+      ]
+    }
+  },
+  methods: {
+    handleDownload(list, name) {
+      let allColumns = this.tableTitleData
+      var columnNames = []
+      var columnValues = []
+      for (var i = 0; i < allColumns.length; i++) {
+        columnNames[i] = allColumns[i].label
+        columnValues[i] = allColumns[i].prop
+      }
+      require.ensure([], () => {
+        const { export_json_to_excel } = require('vendor/Export2Excel')
+        const tHeader = columnNames
+        const filterVal = columnValues
+
+        const list = this.tableData
+        const data = this.formatJson(filterVal, list)
+        export_json_to_excel(tHeader, data, '导出excel列表demo')
+      })
+    },
+    formatJson(filterVal, jsonData) {
+      return jsonData.map(v => filterVal.map(j => v[j]))
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
