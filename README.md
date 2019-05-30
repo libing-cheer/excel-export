@@ -20,7 +20,7 @@ npm run build --report
 
 ### 详细步骤请前往
 
-[24K博客](https://libing.art/)
+[24K博客](https://libing.art/2019/05/29/vue-dao-chu-excel-biao-ge/)
 
 ---
 
