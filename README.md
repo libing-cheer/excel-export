@@ -18,11 +18,18 @@ npm run build
 npm run build --report
 ```
 
+### 效果图
+
+![效果图](https://raw.githubusercontent.com/libing-cheer/excel-export/master/src/assets/%E6%95%88%E6%9E%9C%E5%9B%BE.png)
+
+### 导出图
+
+![导出图](https://raw.githubusercontent.com/libing-cheer/excel-export/master/src/assets/%E5%AF%BC%E5%87%BA%E7%A4%BA%E4%BE%8B%E5%9B%BE.png)
+
 ### 详细步骤请前往
 
 [24K博客](https://libing.art/2019/05/29/vue-dao-chu-excel-biao-ge/)
 
----
 
 如有疑问可在博客下方评论，会及时给予回复的呦。
 
