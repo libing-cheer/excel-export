@@ -18,4 +18,12 @@ npm run build
 npm run build --report
 ```
 
+### 详细步骤请前往
+
+[24K博客](https://libing.art/)
+
+---
+
+如有疑问可在博客下方评论，会及时给予回复的呦。
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
